@@ -1,7 +1,8 @@
 Name: Grafana
-Version: 3.0.1
+Version: 3.0.2
 Requires:
   Libraries: icinga-php-library (>=0.10.1)
   Modules: icingadb (>=1.0.0)
 Description: Grafana - A perfdata visualisation module
  Shows Grafana panels for captured metrics.
+ Added support Tdengine database
