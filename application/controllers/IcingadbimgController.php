@@ -205,6 +205,12 @@ class IcingadbimgController extends IcingadbGrafanaController
             $hostName = Util::graphiteReplace($hostName);
         }
 
+        // Replace special chars for tsdb
+        if ($this->dataSource == "taos") {
+            // Replace spaces with underscores in serviceName
+            $serviceName = str_replace(' ', '_', $serviceName);
+        }
+
         $imageHtml = "";
         $result = $this->getMyimageHtml($serviceName, $hostName, $imageHtml);
 
